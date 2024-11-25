@@ -1,6 +1,6 @@
 [submodule "backend"]
 	path = backend
-	url = git@github.com:amandi-udawatta/wandr-backend.git
+	url = https://github.com/amandi-udawatta/wandr-backend.git
 [submodule "wandr-recommendation-python"]
 	path = wandr-recommendation-python
-	url = git@github.com:samudiperera09/wandr-recommendation-python.git
+	url = https://github.com/samudiperera09/wandr-recommendation-python.git
