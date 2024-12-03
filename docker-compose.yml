@@ -35,13 +35,15 @@ services:
       RECOMMENDATION_API_URL: ${RECOMMENDATION_API_URL}
       OPENAI_API_KEY: ${OPENAI_API_KEY}
       GOOGLE_API_KEY: ${GOOGLE_API_KEY}
+      STRIPE_API_KEY: ${STRIPE_API_KEY}
+      STRIPE_API_VERSION: ${STRIPE_API_VERSION}
     depends_on:
       - wandr-postgres
       - wandr-recommendation
     networks:
       - wandr_network
     volumes:
-      - backend_uploads:/app/uploads
+      - /mnt/backenduploads/uploads:/app/uploads
 
   wandr-postgres:
     image: postgres:16
@@ -78,7 +80,7 @@ networks:
 
 volumes:
   postgres_data:
-  backend_uploads:
+  backenduploads:  # Updated volume name to match the one created on DigitalOcean
 
 
 
